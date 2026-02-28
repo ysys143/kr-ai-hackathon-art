@@ -1,0 +1,16 @@
+[project]
+name = "self-evolution"
+version = "0.1.0"
+description = "자기 진화 - Interactive Art Installation"
+requires-python = ">=3.11"
+dependencies = [
+    "tolvera",
+    "google-genai",
+    "sounddevice>=0.4",
+    "numpy>=1.24",
+    "Pillow>=10.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]

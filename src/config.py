@@ -1,0 +1,66 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# API
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+LYRIA_MODEL = "models/lyria-realtime-exp"
+GEMINI_MODEL = "models/gemini-2.5-flash-preview-native-audio-dialog"
+
+# Tolvera Visual
+SCREEN_W = 1920
+SCREEN_H = 1080
+PARTICLES = 4096
+EVAPORATE = 0.97
+COLORS = [(0.0, 1.0, 1.0), (1.0, 0.0, 1.0), (1.0, 1.0, 0.0), (1.0, 1.0, 1.0)]
+BG_COLOR = (0.0, 0.0, 0.0, 1.0)
+
+# Lyria Music
+DEFAULT_DENSITY = 0.2
+DEFAULT_BRIGHTNESS = 0.3
+DEFAULT_TEMPERATURE = 1.1
+DEFAULT_GUIDANCE = 4.0
+LYRIA_SESSION_TIMEOUT = 540  # 9 min (reconnect before 10 min limit)
+
+# Feedback Loop
+FEEDBACK_INTERVAL = 2.5
+FEEDBACK_GAIN = 0.3
+FEEDBACK_MAX_DELTA = 0.1
+
+# Gemini
+GEMINI_LOOP_INTERVAL = 3.5
+
+# Ghost Replay
+GHOST_DURATION = 20
+GHOST_PEAK_BRIGHTNESS = 2.5
+GHOST_IMMINENT_THRESHOLD = 15
+GHOST_IMMINENT_DURATION = 10
+
+# IML
+IML_INTERVAL = 0.5
+IML_DELTA_THRESHOLD = 0.05
+IML_MAX_PAIRS = 50
+
+# Audio
+AUDIO_SAMPLE_RATE = 48000
+GEMINI_AUDIO_RATE = 16000
+AUDIO_CHANNELS = 2
+AUDIO_BLOCK_SIZE = 4800  # 100ms at 48kHz
+AUDIO_QUEUE_MAXSIZE = 50
+AUDIO_PREFILL_BLOCKS = 5
+
+# Physarum params
+SENSE_ANGLE = 45.0
+SENSE_DIST = 0.05
+MOVE_DIST = 0.01
+
+# Boids params
+SEPARATION = 0.5
+ALIGNMENT = 0.5
+COHESION = 0.5
+
+# Audio feedback
+FLUX_THRESHOLD = 0.3
+SPEED_SCALE = 2.0
+DIST_SCALE = 0.1
